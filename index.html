@@ -3,49 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Simulador Investimento</title>
 </head>
 <body>
     <h1>Simulador De Investimento</h1>
-    <div> <!-- DADOS DE ENTRADA -->
-        <div style="border: solid black;">Depositos
-            <div style="border: solid black;">Valor inicial:</div>
-            <div style="border: solid black;">Valor mensal:</div>
+    <div class="dados-entrada"> <!-- DADOS DE ENTRADA -->
+        <div class="dados-internos">
+            <p>Depositos</p>
+            <div>
+              <label class="campos" name="valor-inicial">Valor inicial:</label>
+              <input type="text" name="">
+            </div>
+            <div class="campos">Valor mensal:</div>
         </div>
-        <div style="border: solid black;">Rentabilidade líquida de impostos e taxas
-            <div style="border: solid black;">Taxa:</div>
-            <div style="border: solid black;">Tempo:</div>
+        <div class="dados-internos">
+            <p>Rentabilidade líquida de impostos e taxas</p>
+            <div class="campos">Taxa:</div>
+            <div class="campos">Tempo:</div>
         </div>
-        <div style="border: solid black;">Inflação:
-            <div style="border: solid black;">Taxa:</div>
-            <div style="border: solid black;">Tempo:</div>
+        <div class="dados-internos">Inflação:
+            <div class="campos">Taxa:</div>
+            <div class="campos">Tempo:</div>
         </div>
-        <div style="border: solid black;">Tempo do investimento:
-            <div style="border: solid black;">Taxa:</div>
-            <div style="border: solid black;">Tempo:</div>
+        <div class="dados-internos">Tempo do investimento:
+            <div class="campos">Taxa:</div>
+            <div class="campos">Tempo:</div>
         </div>
+    </div>
 
-    <div> <!-- DADOS DE SAÍDA -->
-        <div style="border: solid black;">Tempo de Investimento
-            <div style="border: solid black;">Anos:</div>
-            <div style="border: solid black;">Meses:</div>
+    <div class="dados-saida"> <!-- DADOS DE SAÍDA -->
+        <div class="dados-internos">Tempo de Investimento
+            <div class="campos">Anos:</div>
+            <div class="campos">Meses:</div>
         </div>
-        <div style="border: solid black;">Total Acumulado
-            <div style="border: solid black;">Valor Futuro:</div>
-            <div style="border: solid black;">Valor Presente:</div>
+        <div class="dados-internos">Total Acumulado
+            <div class="campos">Valor Futuro:</div>
+            <div class="campos">Valor Presente:</div>
         </div>
-        <div style="border: solid black;">Rentabilidade líquida de inflação:
-            <div style="border: solid black;">Mensal:</div>
-            <div style="border: solid black;">Anual:</div>
+        <div class="dados-internos">Rentabilidade líquida de inflação:
+            <div class="campos">Mensal:</div>
+            <div class="campos">Anual:</div>
         </div>
-        <div style="border: solid black;">Valor presente da renda perpétua:
-            <div style="border: solid black;">Valor Mensal:</div>
-            <div style="border: solid black;">Valor Anual:</div>
+        <div class="dados-internos">Valor presente da renda perpétua:
+            <div class="campos">Valor Mensal:</div>
+            <div class="campos">Valor Anual:</div>
         </div>
     </div>
         
 
-    </div>
+ 
     
 </body>
 </html>
