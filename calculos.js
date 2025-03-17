@@ -1,0 +1,2 @@
+//VARIAVEIS GLOBAIS DO PROJETO
+//Dados de entrada
