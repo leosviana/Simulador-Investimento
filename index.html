@@ -8,63 +8,67 @@
 </head>
 <body>
     <h1>Simulador De Investimento</h1>
-    <div class="dados-entrada"> <!-- DADOS DE ENTRADA -->
-        <div class="dados-internos">            
-              <p>Depositos</p>
-              <label class="campos">Valor inicial:</label>
-              <input type="number" name="valor-inicial">
-              <label class="campos">Valor Mensal:</label>
-              <input type="number" name="valor-mensal">
+    <div class="principal">
+        <div class="dados-entrada"> <!-- DADOS DE ENTRADA -->
+            <div class="dados-internos">            
+                <p>Depositos</p>
+                <label class="campos">Valor inicial:</label>
+                <input type="number" name="valor-inicial">
+                <label class="campos">Valor Mensal:</label>
+                <input type="number" name="valor-mensal">
+            </div>
+            <div class="dados-internos">
+                <p>Rentabilidade líquida de impostos e taxas:</p>
+                <input type="number" name="taxa">
+                <input type="text" name="tempo">
+            </div>
+            <div class="dados-internos">
+                <p>Inflação:</p>
+                <input type="number" name="taxa">
+                <input type="text" name="tempo">
+            </div>
+            <div class="dados-internos">
+                <p>Tempo do investimento:</p>
+                <input type="number" name="taxa">
+                <input type="text" name="tempo-investimento">
+            </div>
+            <div class="botoes-entrada">
+                <button>Calcular</button>
+            </div>
         </div>
-        <div class="dados-internos">
-            <p>Rentabilidade líquida de impostos e taxas:</p>
-            <input type="number" name="taxa">
-            <input type="text" name="tempo">
-        </div>
-        <div class="dados-internos">
-            <p>Inflação:</p>
-            <input type="number" name="taxa">
-            <input type="text" name="tempo">
-        </div>
-        <div class="dados-internos">
-            <p>Tempo do investimento:</p>
-            <input type="number" name="taxa">
-            <input type="text" name="tempo-investimento">
-        </div>
-    </div>
 
-    <div class="dados-saida"> <!-- DADOS DE SAÍDA -->
-        <div class="dados-internos">
-            <p>Tempo de Investimento</p>
-            <label class="campo">Anos</label>
-            <input type="number" name="anos">
-            <label class="campo">Meses</label>
-            <input type="number" name="meses">
+        <div class="dados-saida"> <!-- DADOS DE SAÍDA -->
+            <div class="dados-internos">
+                <p>Tempo de Investimento</p>
+                <label class="campo">Anos</label>
+                <input type="number" name="anos">
+                <label class="campo">Meses</label>
+                <input type="number" name="meses">
+            </div>
+            <div class="dados-internos">
+                <p>Total Acumulado</p>
+                <label class="campo">Valor Futuro:</label>
+                <input type="number" name="valor-futuro">
+                <label class="campo">Valor Presente:</label>
+                <input type="number" name="valor-presente">
+            </div>
+            <div class="dados-internos">
+                <p>Rentabilidade líquida de inflação:</p>
+                <label class="campo">Mensal:</label>
+                <input type="number" name="rentabilidade-mensal">
+                <label class="campo">Anual:</label>
+                <input type="number" name="rentabilidade-anual">
+            </div>
+            <div class="dados-internos">
+                <p>Valor presente da renda perpétua:</p>
+                <label class="campo">Valor Mensal:</label>
+                <input type="number" name="valor-mensal">
+                <label class="campo"> Valor Anual:</label>           
+                <input type="number" name="valor-anual">
+            </div>
         </div>
-        <div class="dados-internos">
-            <p>Total Acumulado</p>
-            <label class="campo">Valor Futuro:</label>
-            <input type="number" name="valor-futuro">
-            <label class="campo">Valor Presente:</label>
-            <input type="number" name="valor-presente">
-        </div>
-        <div class="dados-internos">
-            <p>Rentabilidade líquida de inflação:</p>
-            <label class="campo">Mensal:</label>
-            <input type="number" name="rentabilidade-mensal">
-            <label class="campo">Anual:</label>
-            <input type="number" name="rentabilidade-anual">
-        </div>
-        <div class="dados-internos">
-            <p>Valor presente da renda perpétua:</p>
-            <label class="campo">Valor Mensal:</label>
-            <input type="number" name="valor-mensal">
-            <label class="campo"> Valor Anual:</label>           
-            <input type="number" name="valor-anual">
-        </div>
-    </div>
         
-
+    </div>
  
     
 </body>
