@@ -12,59 +12,59 @@
         <div class="dados-entrada"> <!-- DADOS DE ENTRADA -->
             <div class="dados-internos">            
                 <p>Depositos</p>
-                <label class="campos">Valor inicial:</label>
-                <input type="number" name="valor-inicial">
-                <label class="campos">Valor Mensal:</label>
-                <input type="number" name="valor-mensal">
+                <label>Valor inicial:</label>
+                <input type="number" id="valor-inicial">
+                <label>Valor Mensal:</label>
+                <input type="number" id="valor-mensal">
             </div>
             <div class="dados-internos">
                 <p>Rentabilidade líquida de impostos e taxas:</p>
-                <input type="number" name="taxa">
-                <input type="text" name="tempo">
+                <input type="number" id="taxa-rentabilidade">
+                <input type="text" id="tempo-rentabilidade">
             </div>
             <div class="dados-internos">
                 <p>Inflação:</p>
-                <input type="number" name="taxa">
-                <input type="text" name="tempo">
+                <input type="number" id="taxa-inflacao">
+                <input type="text" id="tempo-inflacao">
             </div>
             <div class="dados-internos">
                 <p>Tempo do investimento:</p>
-                <input type="number" name="taxa">
-                <input type="text" name="tempo-investimento">
+                <input type="number" id="taxa-investimento">
+                <input type="text" id="tempo-investimento">
             </div>
             <div class="botoes-entrada">
-                <button>Calcular</button>
+                <button id="botao-calcular" onclick="botaoCalcular()">Calcular</button>
             </div>
         </div>
 
         <div class="dados-saida"> <!-- DADOS DE SAÍDA -->
             <div class="dados-internos">
                 <p>Tempo de Investimento</p>
-                <label class="campo">Anos</label>
-                <input type="number" name="anos">
-                <label class="campo">Meses</label>
-                <input type="number" name="meses">
+                <label>Anos</label>
+                <input type="number" id="anos">
+                <label>Meses</label>
+                <input type="number" id="meses">
             </div>
             <div class="dados-internos">
                 <p>Total Acumulado</p>
-                <label class="campo">Valor Futuro:</label>
-                <input type="number" name="valor-futuro">
-                <label class="campo">Valor Presente:</label>
-                <input type="number" name="valor-presente">
+                <label>Valor Futuro:</label>
+                <input type="number" id="valor-futuro">
+                <label>Valor Presente:</label>
+                <input type="number" id="valor-presente">
             </div>
             <div class="dados-internos">
                 <p>Rentabilidade líquida de inflação:</p>
-                <label class="campo">Mensal:</label>
-                <input type="number" name="rentabilidade-mensal">
-                <label class="campo">Anual:</label>
-                <input type="number" name="rentabilidade-anual">
+                <label>Mensal:</label>
+                <input type="number" id="rentabilidade-mensal">
+                <label>Anual:</label>
+                <input type="number" id="rentabilidade-anual">
             </div>
             <div class="dados-internos">
                 <p>Valor presente da renda perpétua:</p>
-                <label class="campo">Valor Mensal:</label>
-                <input type="number" name="valor-mensal">
-                <label class="campo"> Valor Anual:</label>           
-                <input type="number" name="valor-anual">
+                <label>Valor Mensal:</label>
+                <input type="number" id="valor-mensal">
+                <label> Valor Anual:</label>           
+                <input type="number" id="valor-anual">
             </div>
         </div>
         
@@ -72,4 +72,6 @@
  
     
 </body>
+
+<script src="./calculos.js"></script>
 </html>
