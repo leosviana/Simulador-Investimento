@@ -1,11 +1,35 @@
+h1{
+    text-align: center;
+}
+
+.principal{
+    border: solid red;
+    display: flex;
+    justify-content: center;
+}
+
 .dados-entrada{
     border: solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.botoes-entrada{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
 }
 
 .dados-saida{
     border: solid black;
+    display: flex;
+    flex-direction: column;
 }
 
 .dados-internos{
     border: solid blue;
+}
+
+input{
+    width: 20%;
 }
