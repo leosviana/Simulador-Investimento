@@ -15,13 +15,12 @@ function botaoCalcular(){
 
     //TAXA RENTABILIDADE (ANUAL/MENSAL):
     var taxaRentabilidade = 12;
-    var taxaRentabilidadeMensal = (1 + (taxaRentabilidade / 100)) / 12;
+    var taxaRentabilidadeMensal = (1 + (taxaRentabilidade / 100)) ** (1 / 12) - 1;
     console.log("taxaRentabilidadeMensal: " + taxaRentabilidadeMensal.toFixed(6));
 
     //TAXA INFLAÇÃO (ANUAL/MENSAL):
     var taxaInflacao = 5;
     var taxaInflacaoMensal = (1 + (taxaInflacao / 100)) ** (1 / 12) - 1;
-    //valorFuturo = 500 * (((1 + 0.12) ** 12 - 1) / 12) * (1 + 12);
     console.log("taxaInflacaoMensal: " + taxaInflacaoMensal.toFixed(6));
 
     //TAXA RENTABILIDADE REAL:
@@ -31,13 +30,24 @@ function botaoCalcular(){
     //RENTABILIDADE REAL:
     //VF = P * (((1 + taxaRealMensal) ** n - 1) / taxaRealMensal);
     var ValorMensal = 500;
-    var numeroMeses = 12;
-    var valorFuturo = ValorMensal * (((1 + taxaRentabilidadeMensal) ** numeroMeses - 1) / taxaRentabilidadeMensal);
-    console.log("valorFuturo: " + valorFuturo.toFixed(2));
+    var periodoInvestimento = 12;
+    var resultValorFuturo = ValorMensal * (((1 + taxaRentabilidadeMensal) ** periodoInvestimento - 1) / taxaRentabilidadeMensal);
+    console.log("valorFuturo: " + resultValorFuturo.toFixed(2));
+
+    //VALOR INVESTIDO:
+    var resultValorInvestido = ValorMensal * periodoInvestimento;
+    console.log("resultValorInvestido: " + resultValorInvestido.toFixed(2));
+
+    //VALOR EM JUROS:
+    var resultValorJuros = resultValorFuturo - resultValorInvestido;
+    console.log("resultValorJuros: " + resultValorJuros.toFixed(2));
+
+    //IMPOSTO DE RENDA:
+    var taxaIR = 0.20; //20%
+    var resultValorIR = resultValorJuros * taxaIR;
+    console.log("IR: " + resultValorIR.toFixed(2));
 
 
-    //CÁLCULO VALOR FUTURO:  
-    //valorFuturo = valorMensal * (((1 + taxaRentabilidade) ** tempoRentabilidade - 1) / taxaRentabilidade) * (1 + taxaRentabilidade);
-
+    //VARLOR TOTAL LÍQUIDO:
 }
 
