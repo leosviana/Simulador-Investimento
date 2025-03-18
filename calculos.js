@@ -27,28 +27,39 @@ function botaoCalcular(){
     var taxaRealMensal = (1 + taxaRentabilidadeMensal) / (1 + taxaInflacaoMensal) - 1;
     console.log("taxaRealMensal: " + taxaRealMensal.toFixed(6));
 
-    //RENTABILIDADE REAL:
-    //VF = P * (((1 + taxaRealMensal) ** n - 1) / taxaRealMensal);
+    //RENTABILIDADE FUTURA TOTAL:
+    var valorInicial = 500;
     var ValorMensal = 500;
     var periodoInvestimento = 12;
-    var resultValorFuturo = ValorMensal * (((1 + taxaRentabilidadeMensal) ** periodoInvestimento - 1) / taxaRentabilidadeMensal);
-    console.log("valorFuturo: " + resultValorFuturo.toFixed(2));
+
+    //Rentabilidade Valor Inicial:
+    var VF_inicial = valorInicial * (1 + taxaRentabilidadeMensal) ** periodoInvestimento;
+    console.log("VF_inicial: " + VF_inicial);
+    //Rentabilidade Valor Mensal:
+    var VF_mensal = valorMensal * (((1 + taxaRentabilidadeMensal) ** periodoInvestimento - 1) / taxaRentabilidadeMensal);
+    console.log("VF_mensal: " + VF_mensal);
+
+    //Valor total futuro:
+    var resultValorFuturo = VF_inicial + VF_mensal;
+    
+    console.log("resultValorFuturo: " + resultValorFuturo.toFixed(2));
 
     //VALOR INVESTIDO:
     var resultValorInvestido = ValorMensal * periodoInvestimento;
     console.log("resultValorInvestido: " + resultValorInvestido.toFixed(2));
 
     //VALOR EM JUROS (MENSAL / ANUAL):
-    //Mensal:
-    
-
     //Anual:
-    var resultValorJuros = resultValorFuturo - resultValorInvestido;
-    console.log("resultValorJuros: " + resultValorJuros.toFixed(2));
+    var resultValorJurosAnual = resultValorFuturo - resultValorInvestido;
+    console.log("resultValorJurosAnual: " + resultValorJurosAnual.toFixed(2));
+
+    //Mensal:
+    var resultValorJurosMensal = resultValorFuturo * taxaRentabilidadeMensal;
+    console.log("resultValorJurosMensal: " + resultValorJurosMensal.toFixed(2));
 
     //IMPOSTO DE RENDA:
     var taxaIR = 0.20; //20%
-    var resultValorIR = resultValorJuros * taxaIR;
+    var resultValorIR = resultValorJurosAnual * taxaIR;
     console.log("IR: " + resultValorIR.toFixed(2));
 
     //VARLOR TOTAL LÍQUIDO:
