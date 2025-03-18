@@ -29,7 +29,7 @@ function botaoCalcular(){
 
     //RENTABILIDADE FUTURA TOTAL:
     var valorInicial = 500;
-    var ValorMensal = 500;
+    var valorMensal = 500;
     var periodoInvestimento = 12;
 
     //Rentabilidade Valor Inicial:
@@ -45,7 +45,7 @@ function botaoCalcular(){
     console.log("resultValorFuturo: " + resultValorFuturo.toFixed(2));
 
     //VALOR INVESTIDO:
-    var resultValorInvestido = ValorMensal * periodoInvestimento;
+    var resultValorInvestido = valorInicial + (valorMensal * periodoInvestimento);
     console.log("resultValorInvestido: " + resultValorInvestido.toFixed(2));
 
     //VALOR EM JUROS (MENSAL / ANUAL):
