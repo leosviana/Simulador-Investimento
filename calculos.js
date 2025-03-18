@@ -11,8 +11,7 @@ function botaoCalcular(){
     var tempoInflacao = document.getElementById("tempo-inflacao").value;
     var periodoInvestimento = document.getElementById("periodo-investimento").value;
     var tempoInvestimento = document.getElementById("tempo-investimento").value;
-    //console.log(valorInicial + "-" + valorMensal + "-" + TaxaRentabilidade + "-" + TempoRentabilidade + "-" + TaxaInflacao + "-" + TempoInflacao + "-" + TaxaInvestimento + "-" + TempoInvestimento);
-
+    
     //TAXA RENTABILIDADE (ANUAL/MENSAL):
     var taxaRentabilidade = 12;
     var taxaRentabilidadeMensal = (1 + (taxaRentabilidade / 100)) ** (1 / 12) - 1;
@@ -28,9 +27,12 @@ function botaoCalcular(){
     console.log("taxaRealMensal: " + taxaRealMensal.toFixed(6));
 
     //RENTABILIDADE FUTURA TOTAL:
-    var valorInicial = 500;
-    var valorMensal = 500;
-    var periodoInvestimento = 12;
+    //var valorInicial = 500;
+    //var valorMensal = 500;
+    //var periodoInvestimento = 12;
+    console.log("valorInicial: " + valorInicial);
+    console.log("valorMensal: " + valorMensal);
+    console.log("periodoInvestimento: " + periodoInvestimento);
 
     //Rentabilidade Valor Inicial:
     var VF_inicial = valorInicial * (1 + taxaRentabilidadeMensal) ** periodoInvestimento;
@@ -66,7 +68,6 @@ function botaoCalcular(){
     var resultValorLiquido = resultValorFuturo - resultValorIR;
     console.log("resultValorLiquido: " + resultValorLiquido.toFixed(2));
 
-    //VALOR PRESENTE DA RENDA PERPÉTUA:
 
 }
 
