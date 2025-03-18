@@ -38,7 +38,11 @@ function botaoCalcular(){
     var resultValorInvestido = ValorMensal * periodoInvestimento;
     console.log("resultValorInvestido: " + resultValorInvestido.toFixed(2));
 
-    //VALOR EM JUROS:
+    //VALOR EM JUROS (MENSAL / ANUAL):
+    //Mensal:
+    
+
+    //Anual:
     var resultValorJuros = resultValorFuturo - resultValorInvestido;
     console.log("resultValorJuros: " + resultValorJuros.toFixed(2));
 
@@ -47,7 +51,11 @@ function botaoCalcular(){
     var resultValorIR = resultValorJuros * taxaIR;
     console.log("IR: " + resultValorIR.toFixed(2));
 
-
     //VARLOR TOTAL LÍQUIDO:
+    var resultValorLiquido = resultValorFuturo - resultValorIR;
+    console.log("resultValorLiquido: " + resultValorLiquido.toFixed(2));
+
+    //VALOR PRESENTE DA RENDA PERPÉTUA:
+
 }
 
