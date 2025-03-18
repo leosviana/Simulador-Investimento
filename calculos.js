@@ -27,9 +27,9 @@ function botaoCalcular(){
     console.log("taxaRealMensal: " + taxaRealMensal.toFixed(6));
 
     //RENTABILIDADE FUTURA TOTAL:
-    //var valorInicial = 500;
-    //var valorMensal = 500;
-    //var periodoInvestimento = 12;
+    var valorInicial = 500;
+    var valorMensal = 500;
+    var periodoInvestimento = 12;
     console.log("valorInicial: " + valorInicial);
     console.log("valorMensal: " + valorMensal);
     console.log("periodoInvestimento: " + periodoInvestimento);
