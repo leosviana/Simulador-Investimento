@@ -15,22 +15,19 @@ function botaoCalcular(){
     var rendaValorMensal = parseFloat(document.getElementById("renda-valor-mensal").value || 0);
     var valorIR = parseFloat(document.getElementById("valor-ir").value || 0);
     var valorFuturoComIR = parseFloat(document.getElementById("valor-futuro-com-ir").value || 0);
-   
+
     //TEMPO RENTABILIDADE
-    if (tempoRentabilidade.value === "Anual"){
+    if (tempoRentabilidade === "Anual"){
         console.log("tempoRentabilidade Anual");
-    }else if(tempoRentabilidade.value === "Mensal"){
+    }else if(tempoRentabilidade === "Mensal"){
         console.log("tempoRentabilidade Mensal");
     }
     
-
     //TAXA RENTABILIDADE (ANUAL/MENSAL):
-    //var taxaRentabilidade = 12;
     var taxaRentabilidadeMensal = (1 + (taxaRentabilidade / 100)) ** (1 / 12) - 1;
     console.log("taxaRentabilidadeMensal: " + taxaRentabilidadeMensal.toFixed(6));
 
     //TAXA INFLAÇÃO (ANUAL/MENSAL):
-    //var taxaInflacao = 5;
     var taxaInflacaoMensal = (1 + (taxaInflacao / 100)) ** (1 / 12) - 1;
     console.log("taxaInflacaoMensal: " + taxaInflacaoMensal.toFixed(6));
 
@@ -47,9 +44,6 @@ function botaoCalcular(){
     document.getElementById("rentabilidade-anual").value = (taxaRealAnual * 100).toFixed(4);
 
     //RENTABILIDADE FUTURA TOTAL:
-    //var valorInicial = 500;
-    //var valorMensal = 500;
-    //var periodoInvestimento = 12;
     console.log("valorInicial: " + valorInicial);
     console.log("valorMensal: " + valorMensal);
     console.log("periodoInvestimento: " + periodoInvestimento);
