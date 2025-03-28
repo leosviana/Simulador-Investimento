@@ -8,7 +8,6 @@ function botaoCalcular(){
     var taxaRentabilidade = parseFloat(document.getElementById("taxa-rentabilidade").value) || 0;
     const tempoRentabilidade = document.getElementById('tempo-rentabilidade').value;
     var taxaInflacao = parseFloat(document.getElementById("taxa-inflacao").value) || 0;
-    var tempoInflacao = parseInt(document.getElementById("tempo-inflacao").value) || 0;
     var periodoInvestimento = parseFloat(document.getElementById("periodo-investimento").value) || 0;
     var tempoInvestimento = parseInt(document.getElementById("tempo-investimento").value) || 0;
     var rendaValorAnual = parseFloat(document.getElementById("renda-valor-anual").value) || 0;
@@ -16,21 +15,29 @@ function botaoCalcular(){
     var valorIR = parseFloat(document.getElementById("valor-ir").value || 0);
     var valorFuturoComIR = parseFloat(document.getElementById("valor-futuro-com-ir").value || 0);
 
-    //TEMPO RENTABILIDADE
-    if (tempoRentabilidade === "Anual"){
-        console.log("tempoRentabilidade Anual");
-    }else if(tempoRentabilidade === "Mensal"){
-        console.log("tempoRentabilidade Mensal");
-    }
-    
+    //=============================================================================
     //TAXA RENTABILIDADE (ANUAL/MENSAL):
-    var taxaRentabilidadeMensal = (1 + (taxaRentabilidade / 100)) ** (1 / 12) - 1;
-    console.log("taxaRentabilidadeMensal: " + taxaRentabilidadeMensal.toFixed(6));
+    if (tempoRentabilidade === "Anual"){
+		// Calcula a taxa de rentabilidade mensal:
+		var taxaRentabilidadeMensal = (1 + (taxaRentabilidade / 100)) ** (1 / 12) - 1;
+		console.log("taxaRentabilidadeMensal: " + (taxaRentabilidadeMensal * 100).toFixed(6) + "%");
+		// Converte a taxa de rentabilidade mensal para taxa anual:
+        var taxaRentabilidadeAnual = (1 + taxaRentabilidadeMensal) ** 12 - 1;
+		console.log("taxaRentabilidadeAnual: " + (taxaRentabilidadeAnual * 100).toFixed(6) + "%");
+		
+    }else if(tempoRentabilidade === "Mensal"){
+        // Calcula a taxa de rentabilidade mensal:
+		var taxaRentabilidadeMensal = (1 + (taxaRentabilidade / 100)) ** (1 / 12) - 1;
+		console.log("taxaRentabilidadeMensal: " + taxaRentabilidadeMensal.toFixed(6));
+    }
+	
+    //=============================================================================
+    //TAXA INFLAÇÃO (ANUAL):
+	// Calcula a taxa de inflação mensal
+	var taxaInflacaoMensal = (1 + (taxaInflacao / 100)) ** (1 / 12) - 1;
+	console.log("taxaInflacaoMensal: " + (taxaInflacaoMensal * 100).toFixed(6) + "%");
 
-    //TAXA INFLAÇÃO (ANUAL/MENSAL):
-    var taxaInflacaoMensal = (1 + (taxaInflacao / 100)) ** (1 / 12) - 1;
-    console.log("taxaInflacaoMensal: " + taxaInflacaoMensal.toFixed(6));
-
+    //=============================================================================
     //TAXA RENTABILIDADE REAL(MENSAL) - RENTABILIDADE LIQUIDA DE INFLAÇÃO:
     //A taxa de rentabilidade real de inflação representa o ganho real de um investimento após descontar a inflação. 
     //Em outras palavras, mostra quanto seu investimento realmente cresceu em termos de poder de compra.
@@ -43,10 +50,16 @@ function botaoCalcular(){
     console.log("taxaRealAnual: " + (taxaRealAnual * 100).toFixed(4));
     document.getElementById("rentabilidade-anual").value = (taxaRealAnual * 100).toFixed(4);
 
+    //=============================================================================
     //RENTABILIDADE FUTURA TOTAL:
+	if (tempoInvestimento === "Anual"){
+		periodoInvestimento = periodoInvestimento * 12;	
+	}else if (tempoInvestimento === "Mensal"){
+		periodoInvestimento = periodoInvestimento;
+	}
     console.log("valorInicial: " + valorInicial);
     console.log("valorMensal: " + valorMensal);
-    console.log("periodoInvestimento: " + periodoInvestimento);
+    console.log("periodoInvestimento: " + periodoInvestimento);	
     //Rentabilidade Valor Inicial:
     var VF_inicial = valorInicial * (1 + taxaRentabilidadeMensal) ** periodoInvestimento;
     console.log("VF_inicial: " + VF_inicial);
@@ -68,7 +81,6 @@ function botaoCalcular(){
     var resultValorJurosAnual = resultValorFuturo - resultValorInvestido;
     console.log("resultValorJurosAnual: " + resultValorJurosAnual.toFixed(2));
     document.getElementById("renda-valor-anual").value = resultValorJurosAnual.toFixed(2);
-
     //Mensal:
     var resultValorJurosMensal = resultValorFuturo * taxaRentabilidadeMensal;
     console.log("resultValorJurosMensal: " + resultValorJurosMensal.toFixed(2));
@@ -84,4 +96,6 @@ function botaoCalcular(){
     var resultValorLiquido = resultValorFuturo - resultValorIR;
     console.log("resultValorLiquido: " + resultValorLiquido.toFixed(2));
     document.getElementById("valor-futuro-com-ir").value = resultValorLiquido.toFixed(2);
+
+	
 }
