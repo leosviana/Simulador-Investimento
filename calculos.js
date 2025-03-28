@@ -21,14 +21,12 @@ function botaoCalcular(){
 		// Calcula a taxa de rentabilidade mensal:
 		var taxaRentabilidadeMensal = (1 + (taxaRentabilidade / 100)) ** (1 / 12) - 1;
 		console.log("taxaRentabilidadeMensal: " + (taxaRentabilidadeMensal * 100).toFixed(6) + "%");
-		// Converte a taxa de rentabilidade mensal para taxa anual:
-        var taxaRentabilidadeAnual = (1 + taxaRentabilidadeMensal) ** 12 - 1;
-		console.log("taxaRentabilidadeAnual: " + (taxaRentabilidadeAnual * 100).toFixed(6) + "%");
 		
     }else if(tempoRentabilidade === "Mensal"){
         // Calcula a taxa de rentabilidade mensal:
-		var taxaRentabilidadeMensal = (1 + (taxaRentabilidade / 100)) ** (1 / 12) - 1;
-		console.log("taxaRentabilidadeMensal: " + taxaRentabilidadeMensal.toFixed(6));
+		//var taxaRentabilidadeMensal = taxaRentabilidade;
+        //var taxaRentabilidadeMensal = (1 + (taxaRentabilidadeMensal / 100)) ** 12 - 1;
+		//console.log("taxaRentabilidadeMensal: " + taxaRentabilidadeMensal.toFixed(6));
     }
 	
     //=============================================================================
