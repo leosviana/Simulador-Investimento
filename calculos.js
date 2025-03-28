@@ -8,7 +8,7 @@ function botaoCalcular(){
     var taxaRentabilidade = parseFloat(document.getElementById("taxa-rentabilidade").value) || 0;
     const tempoRentabilidade = document.getElementById('tempo-rentabilidade').value;
     var taxaInflacao = parseFloat(document.getElementById("taxa-inflacao").value) || 0;
-    var periodoInvestimento = parseFloat(document.getElementById("periodo-investimento").value) || 0;
+    var periodoInvestimento = parseInt(document.getElementById("periodo-investimento").value) || 0;
     var tempoInvestimento = parseInt(document.getElementById("tempo-investimento").value) || 0;
     var rendaValorAnual = parseFloat(document.getElementById("renda-valor-anual").value) || 0;
     var rendaValorMensal = parseFloat(document.getElementById("renda-valor-mensal").value || 0);
@@ -52,14 +52,16 @@ function botaoCalcular(){
 
     //=============================================================================
     //RENTABILIDADE FUTURA TOTAL:
-	if (tempoInvestimento === "Anual"){
-		periodoInvestimento = periodoInvestimento * 12;	
-	}else if (tempoInvestimento === "Mensal"){
-		periodoInvestimento = periodoInvestimento;
+	if (tempoInvestimento === "Anos"){
+		var periodoInvestimento = periodoInvestimento * 12;	
+		console.log(">>>>>periodoInvestimentoAnual: " + periodoInvestimento);	
+	}else if (tempoInvestimento === "Meses"){
+		var periodoInvestimento = periodoInvestimento;
+		console.log(">>>>>periodoInvestimentoMensal: " + periodoInvestimento);	
 	}
     console.log("valorInicial: " + valorInicial);
     console.log("valorMensal: " + valorMensal);
-    console.log("periodoInvestimento: " + periodoInvestimento);	
+    console.log("=====periodoInvestimento: " + periodoInvestimento);	
     //Rentabilidade Valor Inicial:
     var VF_inicial = valorInicial * (1 + taxaRentabilidadeMensal) ** periodoInvestimento;
     console.log("VF_inicial: " + VF_inicial);
