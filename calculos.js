@@ -25,8 +25,8 @@ function botaoCalcular(){
     }else if(tempoRentabilidade === "Mensal"){
         // Calcula a taxa de rentabilidade mensal:
 		//var taxaRentabilidadeMensal = taxaRentabilidade;
-        //var taxaRentabilidadeMensal = (1 + (taxaRentabilidadeMensal / 100)) ** 12 - 1;
-		//console.log("taxaRentabilidadeMensal: " + taxaRentabilidadeMensal.toFixed(6));
+        var taxaRentabilidadeMensal = (1 + (taxaRentabilidade / 100)) ** 12 - 1;
+		console.log("taxaRentabilidadeMensal: " + taxaRentabilidadeMensal.toFixed(6));
     }
 	
     //=============================================================================
