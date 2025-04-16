@@ -30,20 +30,20 @@ function botaoCalcular(){
     }
 	
     //=============================================================================
-    //TAXA INFLAÇÃO (ANUAL):
-	// Calcula a taxa de inflação mensal
+    //TAXA INFLACAO (ANUAL):
+	// Calcula a taxa de inflacao mensal
 	var taxaInflacaoMensal = (1 + (taxaInflacao / 100)) ** (1 / 12) - 1;
 	console.log("taxaInflacaoMensal: " + (taxaInflacaoMensal * 100).toFixed(6) + "%");
 
     //=============================================================================
-    //TAXA RENTABILIDADE REAL(MENSAL) - RENTABILIDADE LIQUIDA DE INFLAÇÃO:
-    //A taxa de rentabilidade real de inflação representa o ganho real de um investimento após descontar a inflação. 
+    //TAXA RENTABILIDADE REAL(MENSAL) - RENTABILIDADE LIQUIDA DE INFLACAO:
+    //A taxa de rentabilidade real de inflacao representa o ganho real de um investimento apos descontar a inflacao. 
     //Em outras palavras, mostra quanto seu investimento realmente cresceu em termos de poder de compra.
     var taxaRealMensal = (1 + taxaRentabilidadeMensal) / (1 + taxaInflacaoMensal) - 1;
     console.log("taxaRealMensal: " + (taxaRealMensal * 100).toFixed(4));
     document.getElementById("rentabilidade-mensal").value = (taxaRealMensal * 100).toFixed(4);
 
-    //TAXA RENTABILIDADE REAL(ANUAL) - RENTABILIDADE LIQUIDA DE INFLAÇÃO:
+    //TAXA RENTABILIDADE REAL(ANUAL) - RENTABILIDADE LIQUIDA DE INFLACAO:
     var taxaRealAnual = (1 + taxaRealMensal) ** 12 - 1;
     console.log("taxaRealAnual: " + (taxaRealAnual * 100).toFixed(4));
     document.getElementById("rentabilidade-anual").value = (taxaRealAnual * 100).toFixed(4);
@@ -92,7 +92,7 @@ function botaoCalcular(){
     console.log("IR: " + resultValorIR.toFixed(2));
     document.getElementById("valor-ir").value = resultValorIR.toFixed(2);
 
-    //VALOR TOTAL LÍQUIDO:
+    //VALOR TOTAL LIQUIDO:
     var resultValorLiquido = resultValorFuturo - resultValorIR;
     console.log("resultValorLiquido: " + resultValorLiquido.toFixed(2));
     document.getElementById("valor-futuro-com-ir").value = resultValorLiquido.toFixed(2);
