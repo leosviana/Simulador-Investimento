@@ -50,7 +50,7 @@ function botaoCalcular(){
 
     //=============================================================================
     //TEMPO DE INVESTIMENTO:
-    periodoInvestimento
+    //periodoInvestimento
     
     
     
