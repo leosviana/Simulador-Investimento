@@ -49,6 +49,11 @@ function botaoCalcular(){
     document.getElementById("rentabilidade-anual").value = (taxaRealAnual * 100).toFixed(2);
 
     //=============================================================================
+    //TEMPO DE INVESTIMENTO:
+    periodoInvestimento
+    
+    
+    
     //RENTABILIDADE FUTURA TOTAL:
 	if (tempoInvestimento === "Anos"){
 		var periodoInvestimento = periodoInvestimento * 12;	
