@@ -20,13 +20,13 @@ function botaoCalcular(){
     if (tempoRentabilidade === "Anual"){
 		// Calcula a taxa de rentabilidade mensal:
 		var taxaRentabilidadeMensal = (1 + (taxaRentabilidade / 100)) ** (1 / 12) - 1;
-		console.log("taxaRentabilidadeMensal: " + (taxaRentabilidadeMensal * 100).toFixed(6) + "%");
+		console.log("taxaRentabilidadeMensal1: " + (taxaRentabilidadeMensal * 100).toFixed(6) + "%");
 		
     }else if(tempoRentabilidade === "Mensal"){
         // Calcula a taxa de rentabilidade mensal:
 		//var taxaRentabilidadeMensal = taxaRentabilidade;
-        var taxaRentabilidadeMensal = (1 + (taxaRentabilidade / 100)) ** 12 - 1;
-		console.log("taxaRentabilidadeMensal: " + taxaRentabilidadeMensal.toFixed(6));
+        var taxaRentabilidadeMensal = taxaRentabilidade / 100;
+		console.log("taxaRentabilidadeMensal2: " + taxaRentabilidadeMensal.toFixed(6));
     }
 	
     //=============================================================================
@@ -41,25 +41,25 @@ function botaoCalcular(){
     //Em outras palavras, mostra quanto seu investimento realmente cresceu em termos de poder de compra.
     var taxaRealMensal = (1 + taxaRentabilidadeMensal) / (1 + taxaInflacaoMensal) - 1;
     console.log("taxaRealMensal: " + (taxaRealMensal * 100).toFixed(4));
-    document.getElementById("rentabilidade-mensal").value = (taxaRealMensal * 100).toFixed(4);
+    document.getElementById("rentabilidade-mensal").value = (taxaRealMensal * 100).toFixed(2);
 
     //TAXA RENTABILIDADE REAL(ANUAL) - RENTABILIDADE LIQUIDA DE INFLACAO:
     var taxaRealAnual = (1 + taxaRealMensal) ** 12 - 1;
     console.log("taxaRealAnual: " + (taxaRealAnual * 100).toFixed(4));
-    document.getElementById("rentabilidade-anual").value = (taxaRealAnual * 100).toFixed(4);
+    document.getElementById("rentabilidade-anual").value = (taxaRealAnual * 100).toFixed(2);
 
     //=============================================================================
     //RENTABILIDADE FUTURA TOTAL:
 	if (tempoInvestimento === "Anos"){
 		var periodoInvestimento = periodoInvestimento * 12;	
-		console.log(">>>>>periodoInvestimentoAnual: " + periodoInvestimento);	
+		console.log("periodoInvestimentoAnual: " + periodoInvestimento);	
 	}else if (tempoInvestimento === "Meses"){
 		var periodoInvestimento = periodoInvestimento;
-		console.log(">>>>>periodoInvestimentoMensal: " + periodoInvestimento);	
+		console.log("periodoInvestimentoMensal: " + periodoInvestimento);	
 	}
     console.log("valorInicial: " + valorInicial);
     console.log("valorMensal: " + valorMensal);
-    console.log("=====periodoInvestimento: " + periodoInvestimento);	
+    console.log("periodoInvestimento: " + periodoInvestimento);	
     //Rentabilidade Valor Inicial:
     var VF_inicial = valorInicial * (1 + taxaRentabilidadeMensal) ** periodoInvestimento;
     console.log("VF_inicial: " + VF_inicial);
