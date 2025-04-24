@@ -79,7 +79,7 @@ function botaoCalcular(){
     //VALOR INVESTIDO:
     var resultValorInvestido = valorInicial + (valorMensal * periodoInvestimento);
     console.log("resultValorInvestido: " + resultValorInvestido.toFixed(2));
-    document.getElementById("valor-presente").value = resultValorInvestido.toFixed(2);
+    document.getElementById("valor-investido").value = resultValorInvestido.toFixed(2);
 
     //VALOR EM JUROS (MENSAL / ANUAL):
     //Anual:
