@@ -9,19 +9,25 @@ p{
 .principal{
     border: solid rgb(255, 0, 0);
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
 }
 
 .dados-entrada{
     border: solid rgb(0, 0, 0);
     display: flex;
+    flex-direction: column;
 }
 
-.dados-taxa{
+.dados-taxa, .dados-deposito{
     border: solid rgb(1, 245, 62);
     display: flex;
     flex-direction: row;
+}
+
+.dados-valor-inicial, .dados-valor-mensal, .dados-taxa-juros, .dados-taxa-inflacao{
+    width: 50%;
+    border: solid rgb(255, 150, 1);
 }
 
 .botoes-entrada{
@@ -34,6 +40,7 @@ p{
     border: solid black;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .dados-deposito, .dados-taxa, .dados-inflacao, .dados-periodo{
