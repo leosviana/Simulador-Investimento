@@ -12,22 +12,28 @@
         <div class="dados-entrada"> <!-- DADOS DE ENTRADA -->
             <div class="dados-deposito">            
                 <p>Depositos</p>
-                <label>Valor inicial:</label>
-                <input type="number" id="valor-inicial">
-                <label>Valor Mensal:</label>
-                <input type="number" id="valor-mensal">
+                <div class="dados-valor-inicial">
+                    <label>Valor inicial:</label>                
+                    <input type="number" id="valor-inicial">
+                </div>
+                <div class="dados-valor-mensal">
+                    <label>Valor mensal:</label>
+                    <input type="number" id="valor-mensal">
+                </div>
             </div>
             <div class="dados-taxa">
-                <p>Taxa de Juros:</p>
-                <input type="number" id="taxa-rentabilidade">
-                <select id="tempo-rentabilidade">
-                    <option value="Anual">Anual</option>
-                    <option value="Mensal">Mensal</option>
-                </select>
-            </div>
-            <div class="dados-inflacao">
-                <p>Inflação anual:</p>
-                <input type="number" id="taxa-inflacao">
+                <div class="dados-taxa-juros">
+                    <p>Taxa de juros:</p>
+                    <input type="number" id="taxa-rentabilidade">
+                    <select id="tempo-rentabilidade">
+                        <option value="Anual">Anual</option>
+                        <option value="Mensal">Mensal</option>
+                    </select>
+                </div>
+                <div class="dados-taxa-inflacao">
+                    <p>Inflação anual:</p>
+                    <input type="number" id="taxa-inflacao">
+                </div>
             </div>
             <div class="dados-periodo">
                 <p>Período:</p>
