@@ -1,11 +1,14 @@
+/*TITULOS: Parametros principais */
 h1{
     text-align: center;
 }
 
+/*PARAGRAFOS: Parametros principais */
 p{
     margin: 0px;
 }
 
+/*DIV PRINCIPAL: Parametros principais */
 .principal{
     border: solid rgb(255, 0, 0);
     display: flex;
@@ -13,48 +16,73 @@ p{
     justify-content: center;
 }
 
+/*DADOS ENTRADA: Parametros principais */
 .dados-entrada{
     border: solid rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
 }
 
-.dados-taxa, .dados-deposito{
+/*GERAL: Largura geral para todos os campos com entrada de dados */
+input{
+    width: 30%;
+}
+
+/*DADOS ENTRADA: Largura dos campos de texto */
+.dados-entrada label{
+    display: inline-block;
+    width: 90px;
+}
+
+/*DADOS ENTRADA: largura interna das div do conjunto de campos */
+.dados-taxa, .dados-deposito, .dados-periodo{
     border: solid blue;
     display: flex;
     flex-direction: row;
 }
 
-.dados-valor-inicial, .dados-valor-mensal, .dados-taxa-juros, .dados-taxa-inflacao{
+/*DADOS ENTRADA: largura interna das div de cada campo */
+.dados-valor-inicial, .dados-valor-mensal, .dados-taxa-juros, .dados-taxa-inflacao, .periodo-investimento{
     width: 50%;
     border: solid rgb(255, 150, 1);
 }
 
+/* DADOS ENTRADA: Botões de entrada*/
 .botoes-entrada{
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     margin: 20px;
 }
 
-.dados-saida{
+/*DADOS SAIDA: Parametros principais */
+.dados-saida{ /*Divs dos dados de saida*/
     border: solid black;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: flex; 
+    flex-direction: row; /*Organizar em linhas */
+    align-items: top; /*Alinha todas as divs ao topo */   
+    gap: 10px; /*Espaço entre as divs */
 }
 
+/*DADOS SAIDA: Parametros principais das div de cada campo */
 .dados-internos{
+    flex: 1; /*Deixar todas as div do mesmo tamanho*/
     border: solid green;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*Organizar em colunas */
 }
 
-input{
-    width: 40%;
+/*DADOS SAIDA: largura interna das div de cada campo*/
+.dados-saida .dados-internos input{
+    width: 70%; /*Tamanho de 70% */
+}
+
+/*DADOS SAIDA: Paragrafo */
+.dados-saida p{ 
+    white-space: nowrap; /*Retirar quebra de linha de paragrafos*/ 
 }
 
 @media (max-width: 400px){
     .dados-taxa{
-        flex-direction: column;
+        flex-direction: column; /*Organizar em colunas */
     }
 }
