@@ -24,8 +24,9 @@ p{
 }
 
 /*GERAL: Largura geral para todos os campos com entrada de dados */
-input{
+input:disabled{
     width: 30%;
+    border: none;
 }
 
 /*DADOS ENTRADA: Textos */
