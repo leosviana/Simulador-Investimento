@@ -28,17 +28,17 @@ input{
     width: 30%;
 }
 
-/*DADOS ENTRADA: Largura dos campos de texto */
+/*DADOS ENTRADA: Textos */
 .dados-entrada label{
-    display: inline-block;
-    width: 90px;
+    display: inline-block; /*Permite definir uma largura e altura do elemento */
+    width: 90px; /*Largura dos campos de texto */
 }
 
 /*DADOS ENTRADA: largura interna das div do conjunto de campos */
 .dados-taxa, .dados-deposito, .dados-periodo{
     border: solid blue;
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
 }
 
 /*DADOS ENTRADA: largura interna das div de cada campo */
@@ -50,7 +50,7 @@ input{
 /* DADOS ENTRADA: Botões de entrada*/
 .botoes-entrada{
     display: flex;
-    justify-content: center; 
+    justify-content: center; /*Ajustar conteudos ao centro*/
     margin: 20px;
 }
 
