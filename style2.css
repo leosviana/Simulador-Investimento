@@ -23,10 +23,13 @@ p{
     flex-direction: column;
 }
 
-/*GERAL: Largura geral para todos os campos com entrada de dados */
-input:disabled{
-    width: 30%;
-    border: none;
+/*GERAL: Largura geral para todos os campos desabilitados*/
+input:disabled {
+    width: 30%; /*Tamanho do campo */
+    border: none; /*Remove a borda */
+    outline: none; /*Remove o contorno de foco */
+    background-color: white; /* Cor do fundo do campo */
+    cursor: not-allowed; 
 }
 
 /*DADOS ENTRADA: Textos */
@@ -75,6 +78,8 @@ input:disabled{
 /*DADOS SAIDA: largura interna das div de cada campo*/
 .dados-saida .dados-internos input{
     width: 70%; /*Tamanho de 70% */
+    font-size: 24px;
+    color: green; /*Cor do texto */ 
 }
 
 /*DADOS SAIDA: Paragrafo */
