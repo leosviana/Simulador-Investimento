@@ -20,7 +20,7 @@ p{
 }
 
 .dados-taxa, .dados-deposito{
-    border: solid rgb(1, 245, 62);
+    border: solid blue;
     display: flex;
     flex-direction: row;
 }
@@ -39,12 +39,14 @@ p{
 .dados-saida{
     border: solid black;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 }
 
-.dados-deposito, .dados-taxa, .dados-inflacao, .dados-periodo{
-    border: solid blue;
+.dados-internos{
+    border: solid green;
+    display: flex;
+    flex-direction: column;
 }
 
 input{
