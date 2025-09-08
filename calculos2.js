@@ -3,7 +3,7 @@
 //var btCalcular = document.getElementById("botao-calcular");
 
 function botaoCalcular(){
-    var valorInicial = parseFloat(document.getElementById("valor-inicial").value) || 0;
+    var valorInicial = parseFloat(document.getElementById("valor-inicial").value = sessionStorage.getItem("valor-inicial")) || 0;
     var valorMensal = parseFloat(document.getElementById("valor-mensal").value) || 0;
     var taxaRentabilidade = parseFloat(document.getElementById("taxa-rentabilidade").value) || 0;
     const tempoRentabilidade = document.getElementById('tempo-rentabilidade').value;
