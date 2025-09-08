@@ -2,7 +2,7 @@
 //Dados de entrada
 //var btCalcular = document.getElementById("botao-calcular");
 
-function botaoCalcular(){
+function verResultado(){
     var valorInicial = parseFloat(document.getElementById("valor-inicial").value = sessionStorage.getItem("valor-inicial")) || 0;
     var valorMensal = parseFloat(document.getElementById("valor-mensal").value) || 0;
     var taxaRentabilidade = parseFloat(document.getElementById("taxa-rentabilidade").value) || 0;
