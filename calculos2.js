@@ -4,10 +4,10 @@
 function armazenaValoresEntrada(){
     var valorInicial = parseFloat(document.getElementById("valor-inicial").value = sessionStorage.getItem("valor-inicial")) || 0;
     var valorMensal = parseFloat(document.getElementById("valor-mensal").value = sessionStorage.getItem("valor-mensal")) || 0;
-    var taxaRentabilidade = parseFloat(document.getElementById("taxa-rentabilidade").value || 0);
+    var taxaRentabilidade = parseFloat(document.getElementById("taxa-rentabilidade").value = sessionStorage.getItem("taxa-rentabilidade")) || 0;
     const tempoRentabilidade = document.getElementById('tempo-rentabilidade').value = sessionStorage.getItem("tempo-rentabilidade");
     var taxaInflacao = parseFloat(document.getElementById("taxa-inflacao").value = sessionStorage.getItem("taxa-inflacao")) || 0;
-    var periodoInvestimento = parseInt(document.getElementById("periodo-investimento").value) || 0;
+    var periodoInvestimento = parseInt(document.getElementById("periodo-investimento").value = sessionStorage.getItem("periodo-investimento")) || 0;
     var tempoInvestimento = document.getElementById("tempo-investimento").value = sessionStorage.getItem("tempo-investimento") || 0;
     var rendaValorAnual = parseFloat(document.getElementById("renda-valor-anual").value) || 0;
     var rendaValorMensal = parseFloat(document.getElementById("renda-valor-mensal").value || 0);
