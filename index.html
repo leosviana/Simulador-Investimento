@@ -47,7 +47,7 @@
             <div class="botoes-entrada">
                 <button id="botao-calcular" onclick="botaoCalcular()">Calcular</button>
 
-                <button onclick="window.location.href = 'resultado.html'">
+                <button onclick="verResultado()">
                     Ver Resultado
                 </button>
             </div>
@@ -97,7 +97,7 @@
 </body>
 
 <script src="./calculos2.js">
-    function enviarParaPágina2(){
+    function verResultado(){
         sessionStorage.setItem("valor-inicial", document.getElementById("valor-inicial").value);
 
         window.location.href = "resultado.html";
