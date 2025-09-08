@@ -93,7 +93,7 @@ function armazenaValoresEntrada(){
     document.getElementById("renda-valor-mensal").value = resultValorJurosMensal.toFixed(2);
 
     //IMPOSTO DE RENDA:
-    var taxaIR = 0.20; //20%
+    var taxaIR = 0.15; //15%
     var resultValorIR = resultValorJurosAnual * taxaIR;
     console.log("IR: " + resultValorIR.toFixed(2));
     document.getElementById("valor-ir").value = resultValorIR.toFixed(2);
