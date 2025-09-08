@@ -98,5 +98,14 @@
     
 </body>
 
-<script src="./calculos.js"></script>
+<script src="./calculos.js">
+    function enviarParaPágina2(){
+        sessionStorage.setItem("valor-inicial", document.getElementById("valor-inicial").value);
+
+        window.location.href = "resultado.html";
+    }
+</script>
+
+
+
 </html>

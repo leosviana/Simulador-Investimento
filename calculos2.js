@@ -3,12 +3,12 @@
 //var btCalcular = document.getElementById("botao-calcular");
 
 function botaoCalcular(){
-    var valorInicial = parseFloat(document.getElementById("valor-inicial").value) || 500;
-    var valorMensal = parseFloat(document.getElementById("valor-mensal").value) || 500;
-    var taxaRentabilidade = parseFloat(document.getElementById("taxa-rentabilidade").value) || 12;
+    var valorInicial = parseFloat(document.getElementById("valor-inicial").value) || 0;
+    var valorMensal = parseFloat(document.getElementById("valor-mensal").value) || 0;
+    var taxaRentabilidade = parseFloat(document.getElementById("taxa-rentabilidade").value) || 0;
     const tempoRentabilidade = document.getElementById('tempo-rentabilidade').value;
-    var taxaInflacao = parseFloat(document.getElementById("taxa-inflacao").value) || 5;
-    var periodoInvestimento = parseInt(document.getElementById("periodo-investimento").value) || 1;
+    var taxaInflacao = parseFloat(document.getElementById("taxa-inflacao").value) || 0;
+    var periodoInvestimento = parseInt(document.getElementById("periodo-investimento").value) || 0;
     var tempoInvestimento = document.getElementById("tempo-investimento").value || 0;
     var rendaValorAnual = parseFloat(document.getElementById("renda-valor-anual").value) || 0;
     var rendaValorMensal = parseFloat(document.getElementById("renda-valor-mensal").value || 0);
