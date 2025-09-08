@@ -47,9 +47,7 @@
             <div class="botoes-entrada">
                 <button id="botao-calcular" onclick="botaoCalcular()">Calcular</button>
 
-                <button onclick="verResultado()">
-                    Ver Resultado
-                </button>
+                <button onclick="verResultado()">Ver Resultado</button> <!-- Teste mudando de página -->
             </div>
         </div>
 
@@ -96,7 +94,8 @@
     
 </body>
 
-<script src="./calculos2.js">
+<script src="./calculos2.js"></script>
+<script>
     function verResultado(){
         sessionStorage.setItem("valor-inicial", document.getElementById("valor-inicial").value);
 
