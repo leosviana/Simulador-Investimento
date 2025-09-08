@@ -97,6 +97,10 @@
 <script>
     function armazenaValoresEntrada(){
         sessionStorage.setItem("valor-inicial", document.getElementById("valor-inicial").value);
+        sessionStorage.setItem("valor-mensal", document.getElementById("valor-mensal").value);
+        sessionStorage.setItem("tempo-rentabilidade", document.getElementById("tempo-rentabilidade").value);
+        sessionStorage.setItem("taxa-inflacao", document.getElementById("taxa-inflacao").value);
+        sessionStorage.setItem("tempo-investimento", document.getElementById("tempo-investimento".value));
 
         window.location.href = "resultado.html";
     }
