@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Simulador Investimento</title>
+</head>
+<body>
+    <h1>Simulador De Investimento</h1>
+    <div class="principal">
+        <div class="dados-entrada"> <!-- DADOS DE ENTRADA -->
+            <div class="dados-deposito">
+                <div class="dados-valor-inicial">
+                    <label>Valor inicial:</label>                
+                    <input type="number" id="valor-inicial">
+                </div>
+                <div class="dados-valor-mensal">
+                    <label>Valor mensal:</label>
+                    <input type="number" id="valor-mensal">
+                </div>
+            </div>
+            <div class="dados-taxa">
+                <div class="dados-taxa-juros">
+                    <label>Taxa de juros:</label>
+                    <input type="number" id="taxa-rentabilidade">
+                    <select id="tempo-rentabilidade">
+                        <option value="Anual">Anual</option>
+                        <option value="Mensal">Mensal</option>
+                    </select>
+                </div>
+                <div class="dados-taxa-inflacao">
+                    <label>Inflação anual:</label>
+                    <input type="number" id="taxa-inflacao">
+                </div>
+            </div>
+            <div class="dados-periodo">
+                <div class="periodo-investimento">
+                    <label>Período:</label>
+                    <input type="number" id="periodo-investimento">
+                    <select id="tempo-investimento">
+                        <option value="Anos">Anos</option>
+                        <option value="Meses">Meses</option>
+                    </select>
+                </div>
+            </div>
+            <div class="botoes-entrada">
+                <button id="botao-calcular" onclick="botaoCalcular()">Calcular</button>
+
+                <button onclick="armazenaValoresEntrada()">Ver Resultado</button> <!-- Teste mudando de página -->
+            </div>
+        </div>
+
+        <div class="dados-saida"> <!-- DADOS DE SAÍDA -->
+            <div class="dados-internos">
+                <p>Tempo de Investimento</p>
+                <label>Anos</label>
+                <input type="number" id="anos">
+                <label>Meses</label>
+                <input type="number" id="meses">
+            </div>
+            <div class="dados-internos">
+                <p>Total Acumulado</p>
+                <label>Valor Investido:</label>
+                <input type="number" id="valor-investido">
+                <label>Valor Futuro:</label>
+                <input type="number" id="valor-futuro">
+            </div>
+            <div class="dados-internos">
+                <p>Rentabilidade líquida de inflação:</p>
+                <label>Mensal:</label>
+                <input type="number" id="rentabilidade-mensal">
+                <label>Anual:</label>
+                <input type="number" id="rentabilidade-anual">
+            </div>
+            <div class="dados-internos">
+                <p>Valor da renda perpétua:</p>
+                <label>Valor Mensal:</label>
+                <input type="number" id="renda-valor-mensal">
+                <label> Valor Anual:</label>           
+                <input type="number" id="renda-valor-anual">
+            </div>
+            <div class="dados-internos">
+                <p>Desconto IR</p>
+                <label>Valor IR:</label>
+                <input type="number" id="valor-ir">
+                <label>Valor Futuro descontando IR:</label>
+                <input type="number" id="valor-futuro-com-ir">
+            </div>
+        </div>
+        
+    </div>
+ 
+    
+</body>
+<script src="./calculos.js"></script>
+<script>
+    function armazenaValoresEntrada(){
+        sessionStorage.setItem("valor-inicial", document.getElementById("valor-inicial").value);
+        sessionStorage.setItem("valor-mensal", document.getElementById("valor-mensal").value);
+        sessionStorage.setItem("taxa-rentabilidade", document.getElementById("taxa-rentabilidade").value);
+        sessionStorage.setItem("tempo-rentabilidade", document.getElementById("tempo-rentabilidade").value);
+        sessionStorage.setItem("taxa-inflacao", document.getElementById("taxa-inflacao").value);
+        sessionStorage.setItem("periodo-investimento", document.getElementById("periodo-investimento").value);
+        sessionStorage.setItem("tempo-investimento", document.getElementById("tempo-investimento").value);
+
+        window.location.href = "resultado.html";
+    }
+</script>
+
+
+
+</html>
