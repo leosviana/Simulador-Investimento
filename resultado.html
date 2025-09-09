@@ -27,46 +27,6 @@
     <title>Simulador Investimento</title>
 </head>
 <body>    
-    <!-- <h1>Simulador De Investimento</h1>
-     <div class="principal"> -->
-        <!-- DADOS DE ENTRADA DESABILITADOS PARA O USUÁRIO NÃO ALTERAR -->
-    <!--  <div class="dados-entrada"> 
-            <div class="dados-deposito">
-                <div class="dados-valor-inicial">
-                    <label>Valor inicial:</label>                
-                    <input type="number" id="valor-inicial" disabled>
-                </div>
-                <div class="dados-valor-mensal">
-                    <label>Valor mensal:</label>
-                    <input type="number" id="valor-mensal" disabled>
-                </div>
-            </div>
-            <div class="dados-taxa">
-                <div class="dados-taxa-juros">
-                    <label>Taxa de juros:</label>
-                    <input type="number" id="taxa-rentabilidade" disabled>
-                    <select id="tempo-rentabilidade" disabled>
-                        <option value="Anual">Anual</option>
-                        <option value="Mensal">Mensal</option>
-                    </select>
-                </div>
-                <div class="dados-taxa-inflacao">
-                    <label>Inflação anual:</label>
-                    <input type="number" id="taxa-inflacao" disabled>
-                </div>
-            </div>
-            <div class="dados-periodo">
-                <div class="periodo-investimento">
-                    <label>Período:</label>
-                    <input type="number" id="periodo-investimento" disabled>
-                    <select id="tempo-investimento" disabled>
-                        <option value="Anos">Anos</option>
-                        <option value="Meses">Meses</option>
-                    </select>
-                </div>
-            </div>
-        </div> -->
-
         <h1 class="text-center">Simulador Investimento (Juros Compostos)</h1>
         <!-- DADOS DE ENTRADA -->
         <div class="dados-entrada row-m3 rounded bg-light p-3"> 
@@ -107,9 +67,9 @@
         </div>
 
         <!-- DADOS DE SAÍDA DESABILITADOS PARA O USUÁRIO NÃO ALTERAR -->
-        <div class="dados-saida row m-3 rounded bg-light p-3"> 
-
-            <fieldset class="dados-internos border rounded p-3 border-secondary bg-white">
+        <div class="dados-saida row m-3 rounded bg-light p-3">
+            <h3>RESULTADO</h3>
+            <fieldset class="dados-internos border rounded p-2 m-3 border-secondary bg-white">
                 <legend class="float-none w-auto px-2">Tempo de investimento</legend>
                 <label>Meses</label>
                 <input type="number" id="anos" disabled>                
@@ -140,17 +100,17 @@
                 <input type="number" id="renda-valor-anual" disabled>
             </fieldset>
 
-
-            <div class="dados-internos">
-                <p>Desconto IR (15%)</p>
+            <fieldset class="dados-internos border rounded p-3 border-secondary bg-white">
+                <legend class="float-none w-auto px-2">Desconto IR (15%)</legend>
                 <label>Valor IR:</label>
                 <input type="number" id="valor-ir" disabled>
                 <label>Valor Futuro descontando IR:</label>
                 <input type="number" id="valor-futuro-com-ir" disabled>
-            </div>
+            </fieldset>
+
         </div>
-        <div class="botoes-saida">
-            <button onclick="window.location.href='index.html'">Simular novamente</button> <!-- Retornar para página principal -->
+        <div class="botoes-saida d-flex justify-content-center m-3">
+            <button class="btn btn-primary btn-lg" onclick="window.location.href='index.html'">Simular novamente</button> <!-- Retornar para página principal -->
         </div>
     </div>  
     
