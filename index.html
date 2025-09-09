@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css"> <!-- Estilo dos dados de entrada -->
     <title>Simulador Investimento</title>
 </head>
 <body>
     <h1>Simulador De Investimento</h1>
     <div class="principal">
-        <div class="dados-entrada"> <!-- DADOS DE ENTRADA -->
+        <!-- DADOS DE ENTRADA -->
+        <div class="dados-entrada"> 
             <div class="dados-deposito">
                 <div class="dados-valor-inicial">
                     <label>Valor inicial:</label>                
@@ -45,56 +46,14 @@
                 </div>
             </div>
             <div class="botoes-entrada">
-                <button id="botao-calcular" onclick="botaoCalcular()">Calcular</button>
-
-                <button onclick="armazenaValoresEntrada()">Ver Resultado</button> <!-- Teste mudando de página -->
+                <button onclick="armazenaValoresEntrada()">Ver Resultado</button> <!-- Ao clicar no botão chama a função -->
             </div>
         </div>
-
-        <div class="dados-saida"> <!-- DADOS DE SAÍDA -->
-            <div class="dados-internos">
-                <p>Tempo de Investimento</p>
-                <label>Anos</label>
-                <input type="number" id="anos">
-                <label>Meses</label>
-                <input type="number" id="meses">
-            </div>
-            <div class="dados-internos">
-                <p>Total Acumulado</p>
-                <label>Valor Investido:</label>
-                <input type="number" id="valor-investido">
-                <label>Valor Futuro:</label>
-                <input type="number" id="valor-futuro">
-            </div>
-            <div class="dados-internos">
-                <p>Rentabilidade líquida de inflação:</p>
-                <label>Mensal:</label>
-                <input type="number" id="rentabilidade-mensal">
-                <label>Anual:</label>
-                <input type="number" id="rentabilidade-anual">
-            </div>
-            <div class="dados-internos">
-                <p>Valor da renda perpétua:</p>
-                <label>Valor Mensal:</label>
-                <input type="number" id="renda-valor-mensal">
-                <label> Valor Anual:</label>           
-                <input type="number" id="renda-valor-anual">
-            </div>
-            <div class="dados-internos">
-                <p>Desconto IR</p>
-                <label>Valor IR:</label>
-                <input type="number" id="valor-ir">
-                <label>Valor Futuro descontando IR:</label>
-                <input type="number" id="valor-futuro-com-ir">
-            </div>
-        </div>
-        
-    </div>
- 
-    
+    </div>    
 </body>
-<script src="./calculos.js"></script>
+
 <script>
+    //Função para armazenar valores de entrada na sessão do navegador. (Será apagado ao fechar o navegador)
     function armazenaValoresEntrada(){
         sessionStorage.setItem("valor-inicial", document.getElementById("valor-inicial").value);
         sessionStorage.setItem("valor-mensal", document.getElementById("valor-mensal").value);
@@ -104,10 +63,7 @@
         sessionStorage.setItem("periodo-investimento", document.getElementById("periodo-investimento").value);
         sessionStorage.setItem("tempo-investimento", document.getElementById("tempo-investimento").value);
 
-        window.location.href = "resultado.html";
+        window.location.href = "resultado.html"; //Envia os valores de entrada para a página "resultado.html"
     }
 </script>
-
-
-
 </html>

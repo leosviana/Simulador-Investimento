@@ -1,15 +1,14 @@
 //VARIAVEIS GLOBAIS DO PROJETO
 //Dados de entrada
-var btCalcular = document.getElementById("botao-calcular");
 
-function botaoCalcular(){
-    var valorInicial = parseFloat(document.getElementById("valor-inicial").value) || 0;
-    var valorMensal = parseFloat(document.getElementById("valor-mensal").value) || 0;
-    var taxaRentabilidade = parseFloat(document.getElementById("taxa-rentabilidade").value) || 0;
-    const tempoRentabilidade = document.getElementById('tempo-rentabilidade').value;
-    var taxaInflacao = parseFloat(document.getElementById("taxa-inflacao").value) || 0;
-    var periodoInvestimento = parseInt(document.getElementById("periodo-investimento").value) || 0;
-    var tempoInvestimento = document.getElementById("tempo-investimento").value || 0;
+function armazenaValoresEntrada(){
+    var valorInicial = parseFloat(document.getElementById("valor-inicial").value = sessionStorage.getItem("valor-inicial")) || 0;
+    var valorMensal = parseFloat(document.getElementById("valor-mensal").value = sessionStorage.getItem("valor-mensal")) || 0;
+    var taxaRentabilidade = parseFloat(document.getElementById("taxa-rentabilidade").value = sessionStorage.getItem("taxa-rentabilidade")) || 0;
+    const tempoRentabilidade = document.getElementById('tempo-rentabilidade').value = sessionStorage.getItem("tempo-rentabilidade");
+    var taxaInflacao = parseFloat(document.getElementById("taxa-inflacao").value = sessionStorage.getItem("taxa-inflacao")) || 0;
+    var periodoInvestimento = parseInt(document.getElementById("periodo-investimento").value = sessionStorage.getItem("periodo-investimento")) || 0;
+    var tempoInvestimento = document.getElementById("tempo-investimento").value = sessionStorage.getItem("tempo-investimento") || 0;
     var rendaValorAnual = parseFloat(document.getElementById("renda-valor-anual").value) || 0;
     var rendaValorMensal = parseFloat(document.getElementById("renda-valor-mensal").value || 0);
     var valorIR = parseFloat(document.getElementById("valor-ir").value || 0);
@@ -94,7 +93,7 @@ function botaoCalcular(){
     document.getElementById("renda-valor-mensal").value = resultValorJurosMensal.toFixed(2);
 
     //IMPOSTO DE RENDA:
-    var taxaIR = 0.20; //20%
+    var taxaIR = 0.15; //15%
     var resultValorIR = resultValorJurosAnual * taxaIR;
     console.log("IR: " + resultValorIR.toFixed(2));
     document.getElementById("valor-ir").value = resultValorIR.toFixed(2);

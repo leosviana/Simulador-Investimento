@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style2.css">
+    <link rel="stylesheet" href="./styleDadosEntrada.css">
+    <link rel="stylesheet" href="./styleDadosSaida.css">
     <script> 
-        window.onload = function(){ //Traz para essa página todos valores inseridos nos campos da página index
+        window.onload = function(){ //Traz todos valores inseridos nos campos da página "index" para essa página "resultado"
             armazenaValoresEntrada();
         }
     </script>
-    <script src="./calculos2.js"></script> <!-- Realiza todo o cálculo -->
+    <script src="./calculos.js"></script> <!-- Realiza todo o cálculo -->
 
     <title>Simulador Investimento</title>
 </head>
 <body>    
     <h1>Simulador De Investimento</h1>
     <div class="principal">
-        <div class="dados-entrada"> <!-- DADOS DE ENTRADA -->
+        <!-- DADOS DE ENTRADA DESABILITADOS PARA O USUÁRIO NÃO ALTERAR -->
+        <div class="dados-entrada"> 
             <div class="dados-deposito">
                 <div class="dados-valor-inicial">
                     <label>Valor inicial:</label>                
@@ -53,10 +55,10 @@
             </div>
         </div>
 
-        <div class="dados-saida"> <!-- DADOS DE SAÍDA -->
+        <!-- DADOS DE SAÍDA -->
+        <div class="dados-saida"> 
             <div class="dados-internos">
                 <p>Tempo de Investimento</p>
-                <!--<label>Anos</label> -->
                 <label>Meses</label>
                 <input type="number" id="anos" disabled>                
                 <input type="number" id="meses" disabled>
@@ -91,14 +93,8 @@
             </div>
         </div>
         <div class="botoes-saida">
-            <button onclick="window.location.href='index.html'">Simular novamente</button>
+            <button onclick="window.location.href='index.html'">Simular novamente</button> <!-- Retornar para página principal -->
         </div>
-    </div>
-                
-
+    </div>          
 </body>
-
-
-
-
 </html>
