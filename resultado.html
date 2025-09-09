@@ -67,52 +67,68 @@
         </div>
 
         <!-- DADOS DE SAÍDA DESABILITADOS PARA O USUÁRIO NÃO ALTERAR -->
-        <div class="dados-saida row m-3 rounded bg-light p-3">
-            <h3>RESULTADO</h3>
-            <fieldset class="dados-internos border rounded p-2 m-3 border-secondary bg-white">
+        <div class="dados-saida d-flex mx-auto w-75 row m-3 rounded bg-light p-3">
+            <h3 class="text-center">RESULTADO</h3>
+            <fieldset class="dados-internos d-flex border rounded p-2 border-secondary bg-white">
                 <legend class="float-none w-auto px-2">Tempo de investimento</legend>
                 <label>Meses</label>
-                <input type="number" id="anos" disabled>                
-                <input type="number" id="meses" disabled>
+                <div class="p-1"><input type="number" id="anos" disabled></div>
+                <div class="p-1"><input type="number" id="meses" disabled></div>
             </fieldset>
 
-            <fieldset class="dados-internos border rounded p-3 border-secondary bg-white">
+            <fieldset class="dados-internos d-flex border rounded p-2 border-secondary bg-white">
                 <legend class="float-none w-auto px-2">Total Acumulado</legend>
-                <label>Valor Investido:</label>
-                <input type="number" id="valor-investido" disabled>
-                <label>Valor Futuro:</label>
-                <input type="number" id="valor-futuro" disabled>
+                <div class="p-1">
+                    <label>Valor Investido:</label>
+                    <input type="number" id="valor-investido" disabled>
+                </div>
+                <div class="p-1">
+                    <label>Valor Futuro:</label>
+                    <input type="number" id="valor-futuro" disabled>
+                </div>
             </fieldset>
 
-            <fieldset class="dados-internos border rounded p-3 border-secondary bg-white">
+            <fieldset class="dados-internos d-flex border rounded p-2 border-secondary bg-white">
                 <legend class="float-none w-auto px-2">Taxa rentabilidade líquida de inflação(%):</legend>
-                <label>Mensal:</label>
-                <input type="number" id="rentabilidade-mensal" disabled>
-                <label>Anual:</label>
-                <input type="number" id="rentabilidade-anual" disabled>
+                <div class="p-1">
+                    <label>Mensal:</label>
+                    <input type="number" id="rentabilidade-mensal" disabled>
+                </div>
+                <div class="p-1">
+                    <label>Anual:</label>
+                    <input type="number" id="rentabilidade-anual" disabled>
+                </div>
             </fieldset>
 
-            <fieldset class="dados-internos border rounded p-3 border-secondary bg-white ">
+            <fieldset class="dados-internos d-flex border rounded p-2 border-secondary bg-white ">
                 <legend class="float-none w-auto px-2">Valor da renda perpétua:</legend>
-                <label>Valor Mensal:</label>
-                <input type="number" id="renda-valor-mensal" disabled>
-                <label> Valor Anual:</label>           
-                <input type="number" id="renda-valor-anual" disabled>
+                <div class="p-1">
+                    <label>Valor Mensal:</label>
+                    <input type="number" id="renda-valor-mensal" disabled>
+                </div>
+                <div class="p-1">
+                    <label> Valor Anual:</label>           
+                    <input type="number" id="renda-valor-anual" disabled>
+                </div>
             </fieldset>
 
-            <fieldset class="dados-internos border rounded p-3 border-secondary bg-white">
+            <fieldset class="dados-internos d-flex border rounded p-2 border-secondary bg-white">
                 <legend class="float-none w-auto px-2">Desconto IR (15%)</legend>
-                <label>Valor IR:</label>
-                <input type="number" id="valor-ir" disabled>
-                <label>Valor Futuro descontando IR:</label>
-                <input type="number" id="valor-futuro-com-ir" disabled>
+                <div class="p-1">
+                    <label>Valor IR:</label>
+                    <input type="number" id="valor-ir" disabled>
+                </div>
+                <div class="p-1">
+                    <label>Valor Futuro descontando IR:</label>
+                    <input type="number" id="valor-futuro-com-ir" disabled>
+                </div>
             </fieldset>
 
         </div>
         <div class="botoes-saida d-flex justify-content-center m-3">
             <button class="btn btn-primary btn-lg" onclick="window.location.href='index.html'">Simular novamente</button> <!-- Retornar para página principal -->
         </div>
-    </div>  
+   
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>  
 </body>
