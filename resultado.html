@@ -107,7 +107,15 @@
         </div>
 
         <!-- DADOS DE SAÍDA DESABILITADOS PARA O USUÁRIO NÃO ALTERAR -->
-        <div class="dados-saida row m-3 rounded bg-secondary p-3"> 
+        <div class="dados-saida row m-3 rounded bg-light p-3"> 
+
+            <fieldset class="dados-internos border rounded p-3 border-secondary bg-white">
+                <legend class="float-none w-auto px-2">Tempo de investimento</legend>
+                <label>Meses</label>
+                <input type="number" id="anos" disabled>                
+                <input type="number" id="meses" disabled>
+            </fieldset>
+
             <div class="dados-internos rounded bg-light p-2">
                 <p>Tempo de Investimento</p>
                 <label>Meses</label>
