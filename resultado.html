@@ -29,19 +29,19 @@
 <body>
         <h1 class="text-center">Simulador Investimento (Juros Compostos)</h1>
         <!-- DADOS DE ENTRADA -->
-        <div class="dados-entrada mx-auto w-75 row-m3 rounded bg-light p-3"> 
-            <div class="dados-deposito row-m3 d-flex m-2">
-                <div class="dados-valor-inicial col p-2">
+        <div class="dados-entrada d-flex mx-auto w-75 row rounded bg-light p-3"> 
+            <div class="dados-deposito d-flex row justify-content-center m-2">
+                <div class="dados-valor-inicial col-12 col-md-6 col-lg-4 p-2">
                     <label>Valor inicial:</label>                
                     <input type="number" id="valor-inicial" disabled>
                 </div>
-                <div class="dados-valor-mensal col p-2">
+                <div class="dados-valor-mensal col-12 col-md-6 col-lg-4 p-2">
                     <label>Valor mensal:</label>
                     <input type="number" id="valor-mensal" disabled>
                 </div>
             </div>
-            <div class="dados-taxa row-m3 d-flex m-2">
-                <div class="dados-taxa-juros col p-2">
+            <div class="dados-taxa d-flex row justify-content-center m-2">
+                <div class="dados-taxa-juros col-12 col-md-6 col-lg-4 p-2">
                     <label>Taxa de juros:</label>
                     <input type="number" id="taxa-rentabilidade" disabled>
                     <select id="tempo-rentabilidade" disabled>
@@ -49,13 +49,13 @@
                         <option value="Mensal">Mensal</option>
                     </select>
                 </div>
-                <div class="dados-taxa-inflacao col p-2">
+                <div class="dados-taxa-inflacao col-12 col-md-6 col-lg-4 p-2">
                     <label>Inflação anual:</label>
                     <input type="number" id="taxa-inflacao" disabled>
                 </div>
             </div>
-            <div class="dados-periodo row-m3 d-flex m-2">
-                <div class="periodo-investimento col p-2">
+            <div class="dados-periodo d-flex row justify-content-center m-2">
+                <div class="periodo-investimento col-12 col-md-6 col-lg-4 p-2">
                     <label>Período:</label>
                     <input type="number" id="periodo-investimento" disabled>
                     <select id="tempo-investimento" class="custom-select" disabled>
